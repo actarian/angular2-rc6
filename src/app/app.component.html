@@ -1,0 +1,26 @@
+<h1>
+  {{title}}
+</h1>
+
+<p>You can click the titles to select tabs.</p>
+<hr>
+<br>
+
+<ws-tabs (tabEmitter)="onSelected($event)">
+  <ws-tab [title]="'Tab 1'">
+    Content 1
+  </ws-tab>
+  <ws-tab [title]="'Tab 2'">
+    Content 2
+  </ws-tab>
+  <ws-tab [title]="'Tab 3'">
+    Content 3
+  </ws-tab>
+</ws-tabs>
+
+<h3>Logs:</h3>
+<ul>
+  <li *ngFor="let log of logs">
+    {{log}}
+  </li>
+</ul>
